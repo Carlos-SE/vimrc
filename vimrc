@@ -29,7 +29,9 @@ call plug#end()
 colorscheme gruvbox
 set background=dark
 
+" Transparent background
 hi Normal guibg=NONE ctermbg=NONE
+
 
 "	Remapping section
 
