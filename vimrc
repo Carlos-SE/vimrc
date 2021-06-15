@@ -46,5 +46,5 @@ let mapleader=" "
 nnoremap <Leader>h	80i#<Esc>4o<Esc>80i#<Esc>2o<Esc>
 nnoremap <Leader>c	<Esc>:set colorcolumn=80<CR>
 nnoremap <Leader>C	<Esc>:set colorcolumn= <CR>
-nnoremap <Leader>gd :YcmC GoToDeclaration<CR>
+nnoremap <Leader>gd 	:YcmC GoToDeclaration<CR>
 nnoremap <Leader>u	YpVr-<CR>
