@@ -3,7 +3,7 @@
 "	Super basic configurations and plugins
 "	Plugins manager: vim-plug: https://github.com/junegunn/vim-plug
 "
-"	Made by Carlos-SE
+"	Made by Solracs
 
 
 set tabstop=4 softtabstop=4
@@ -29,6 +29,8 @@ call plug#end()
 colorscheme gruvbox
 set background=dark
 
+hi Normal guibg=NONE ctermbg=NONE
+
 "	Remapping section
 
 let mapleader=" "
@@ -42,3 +44,7 @@ let mapleader=" "
 
 
 nnoremap <Leader>h	80i#<Esc>4o<Esc>80i#<Esc>2o<Esc>
+nnoremap <Leader>c	<Esc>:set colorcolumn=80<CR>
+nnoremap <Leader>C	<Esc>:set colorcolumn= <CR>
+nnoremap <Leader>gd :YcmC GoToDeclaration<CR>
+nnoremap <Leader>u	YpVr-<CR>
