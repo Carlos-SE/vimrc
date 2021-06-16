@@ -16,6 +16,11 @@ set nohlsearch
 set smartindent
 set ttimeoutlen=500
 
+let g:netrw_banner = 0
+let g:netrw_winsize = 20
+let g:netrw_browse_split = 4
+let g:netrw_liststyle = 3
+
 "	Plugin's section
 
 call plug#begin('~/.vim/plugged')
@@ -29,9 +34,7 @@ call plug#end()
 colorscheme gruvbox
 set background=dark
 
-" Transparent background
 hi Normal guibg=NONE ctermbg=NONE
-
 
 "	Remapping section
 
@@ -46,7 +49,9 @@ let mapleader=" "
 
 
 nnoremap <Leader>h	80i#<Esc>4o<Esc>80i#<Esc>2o<Esc>
-nnoremap <Leader>c	<Esc>:set colorcolumn=80<CR>
-nnoremap <Leader>C	<Esc>:set colorcolumn= <CR>
-nnoremap <Leader>gd 	:YcmC GoToDeclaration<CR>
+nnoremap <Leader>c	:set colorcolumn=80<CR>
+nnoremap <Leader>C	:set colorcolumn= <CR>
+nnoremap <Leader>gd :YcmC GoToDeclaration<CR>
 nnoremap <Leader>u	YpVr-<CR>
+nnoremap <Leader>od :Vex<CR>
+nnoremap <Leader>d	:wincmd h<CR>
