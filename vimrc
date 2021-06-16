@@ -49,9 +49,17 @@ let mapleader=" "
 
 
 nnoremap <Leader>h	80i#<Esc>4o<Esc>80i#<Esc>2o<Esc>
+
+" Enable and disable visual column at 80
 nnoremap <Leader>c	:set colorcolumn=80<CR>
 nnoremap <Leader>C	:set colorcolumn= <CR>
+
+" YouCompleteMe go to declaration
 nnoremap <Leader>gd :YcmC GoToDeclaration<CR>
+
+" Unerlide previous line
 nnoremap <Leader>u	YpVr-<CR>
+
+" Explore tab and change to it
 nnoremap <Leader>od :Vex<CR>
 nnoremap <Leader>d	:wincmd h<CR>
