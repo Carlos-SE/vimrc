@@ -3,7 +3,7 @@
 "	Super basic configurations and plugins
 "	Plugins manager: vim-plug: https://github.com/junegunn/vim-plug
 "
-"	Made by Solracs
+"	Made by Carlos-SE
 
 
 set tabstop=4 softtabstop=4
