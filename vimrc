@@ -1,9 +1,9 @@
-"	.vimrc settings and configurations
-"	
-"	Super basic configurations and plugins
-"	Plugins manager: vim-plug: https://github.com/junegunn/vim-plug
+"       .vimrc settings and configurations
 "
-"	Made by Carlos-SE
+"       Super basic configurations and plugins
+"       Plugins manager: vim-plug: https://github.com/junegunn/vim-plug
+"
+"       Made by Carlos-SE
 
 
 set tabstop=4 softtabstop=4
@@ -21,22 +21,24 @@ let g:netrw_winsize = 20
 let g:netrw_browse_split = 4
 let g:netrw_liststyle = 3
 
-"	Plugin's section
+"       Plugin's section
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'gruvbox-community/gruvbox'
+Plug 'romainl/Apprentice'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ycm-core/YouCompleteMe'
 
 call plug#end()
 
-colorscheme gruvbox
+colorscheme apprentice
 set background=dark
 
-hi Normal guibg=NONE ctermbg=NONE
+"       Transparent background
+"hi Normal guibg=NONE ctermbg=NONE
 
-"	Remapping section
+"       Remapping section
 
 let mapleader=" "
 
@@ -48,18 +50,19 @@ let mapleader=" "
 " ################################################################################
 
 
-nnoremap <Leader>h	80i#<Esc>4o<Esc>80i#<Esc>2o<Esc>
+nnoremap <Leader>h      80i#<Esc>4o<Esc>80i#<Esc>2o<Esc>
 
 " Enable and disable visual column at 80
-nnoremap <Leader>c	:set colorcolumn=80<CR>
-nnoremap <Leader>C	:set colorcolumn= <CR>
+nnoremap <Leader>c      :set colorcolumn=81<CR>
+nnoremap <Leader>C      :set colorcolumn= <CR>
 
 " YouCompleteMe go to declaration
 nnoremap <Leader>gd :YcmC GoToDeclaration<CR>
 
 " Unerlide previous line
-nnoremap <Leader>u	YpVr-<CR>
+nnoremap <Leader>u      YpVr-<CR>
 
 " Explore tab and change to it
 nnoremap <Leader>od :Vex<CR>
-nnoremap <Leader>d	:wincmd h<CR>
+nnoremap <Leader>d      :wincmd h<CR>
+nnoremap <Leader>cd :wincmd l<CR>:on<CR>
