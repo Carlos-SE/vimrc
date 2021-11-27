@@ -30,6 +30,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'romainl/Apprentice'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'farmergreg/vim-lastplace'
 
 call plug#end()
 
