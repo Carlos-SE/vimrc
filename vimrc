@@ -29,6 +29,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'gruvbox-community/gruvbox'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'farmergreg/vim-lastplace'
 
 call plug#end()
 
