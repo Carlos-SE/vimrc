@@ -16,6 +16,8 @@ set nohlsearch
 set smartindent
 set ttimeoutlen=500
 set laststatus=2
+set title
+set noshowmode
 
 let g:netrw_banner = 0
 let g:netrw_winsize = 20
@@ -27,16 +29,27 @@ let g:netrw_liststyle = 3
 call plug#begin('~/.vim/plugged')
 
 Plug 'gruvbox-community/gruvbox'
+Plug 'romainl/Apprentice'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'farmergreg/vim-lastplace'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
-colorscheme gruvbox
+colorscheme apprentice
 set background=dark
 
-hi Normal guibg=NONE ctermbg=NONE
+"	Transparent background
+"hi Normal guibg=NONE ctermbg=NONE
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
+let g:lightline = {
+      \ 'colorscheme': 'PaperColor',
+      \ }
 
 "	Remapping section
 
@@ -53,7 +66,7 @@ let mapleader=" "
 nnoremap <Leader>h	80i#<Esc>4o<Esc>80i#<Esc>2o<Esc>
 
 " Enable and disable visual column at 80
-nnoremap <Leader>c	:set colorcolumn=80<CR>
+nnoremap <Leader>c	:set colorcolumn=81<CR>
 nnoremap <Leader>C	:set colorcolumn= <CR>
 
 " YouCompleteMe go to declaration
@@ -65,3 +78,4 @@ nnoremap <Leader>u	YpVr-<CR>
 " Explore tab and change to it
 nnoremap <Leader>od :Vex<CR>
 nnoremap <Leader>d	:wincmd h<CR>
+nnoremap <Leader>cd :wincmd l<CR>:on<CR>
