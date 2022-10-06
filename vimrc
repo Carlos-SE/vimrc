@@ -16,6 +16,8 @@ set nohlsearch
 set smartindent
 set ttimeoutlen=500
 set laststatus=2
+set title
+set noshowmode
 
 let g:netrw_banner = 0
 let g:netrw_winsize = 20
@@ -31,12 +33,23 @@ Plug 'romainl/Apprentice'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'farmergreg/vim-lastplace'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
 colorscheme apprentice
 set background=dark
 
+"	Transparent background
+"hi Normal guibg=NONE ctermbg=NONE
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
+let g:lightline = {
+      \ 'colorscheme': 'PaperColor',
+      \ }
 "       Transparent background
 "hi Normal guibg=NONE ctermbg=NONE
 
@@ -55,6 +68,8 @@ let mapleader=" "
 nnoremap <Leader>h      80i#<Esc>4o<Esc>80i#<Esc>2o<Esc>
 
 " Enable and disable visual column at 80
+nnoremap <Leader>c	:set colorcolumn=81<CR>
+nnoremap <Leader>C	:set colorcolumn= <CR>
 nnoremap <Leader>c      :set colorcolumn=81<CR>
 nnoremap <Leader>C      :set colorcolumn= <CR>
 
@@ -66,5 +81,6 @@ nnoremap <Leader>u      YpVr-<CR>
 
 " Explore tab and change to it
 nnoremap <Leader>od :Vex<CR>
+nnoremap <Leader>d	:wincmd h<CR>
 nnoremap <Leader>d      :wincmd h<CR>
 nnoremap <Leader>cd :wincmd l<CR>:on<CR>
