@@ -34,6 +34,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'farmergreg/vim-lastplace'
 Plug 'itchyny/lightline.vim'
+Plug 'mg979/vim-visual-multi'
 
 call plug#end()
 
