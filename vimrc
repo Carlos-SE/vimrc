@@ -87,5 +87,7 @@ nnoremap <Leader>d      :wincmd h<CR>
 nnoremap <Leader>cd :wincmd l<CR>:on<CR>
 
 " LaTex shorcuts
+" adds figure section
 nnoremap <Leader>li		i\begin{figure}[h]<Esc>o<Tab>\centering<Esc>o\includegraphics{img/CHANGE}<Esc>ocaption{}<Esc>o<Esc>I\end{figure}<Esc>2kfCcw
+" includes LaTex packages
 nnoremap <Leader>lu		i\documentclass{article}<CR>\usepackage[utf8]{inputenc}<CR>\usepackage[spanish]{babel}<CR>\usepackage{graphicx}<CR>\usepackage{subfigure}<CR>\usepackage[utf8]{inputenc}<CR>\usepackage{listings}<CR>\usepackage[hidelinks]{hyperref}<CR>\usepackage[margin=30mm]{geometry}<CR>\usepackage{fancyhdr}<CR>\pagestyle{fancy}<CR>\fancyhf{}<CR>\lhead{Left header}<CR>\rhead{Right header}<CR>\rfoot{\thepage}<CR><Esc>
