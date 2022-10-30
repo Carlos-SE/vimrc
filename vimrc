@@ -85,3 +85,6 @@ nnoremap <Leader>od :Vex<CR>
 nnoremap <Leader>d	:wincmd h<CR>
 nnoremap <Leader>d      :wincmd h<CR>
 nnoremap <Leader>cd :wincmd l<CR>:on<CR>
+
+" LaTex shorcuts
+nnoremap <Leader>li		i\begin{figure}[h]<Esc>o<Tab>\centering<Esc>o<Tab>includegraphics{img/}<Esc>o<Tab>caption{}<Esc>o\end{figure}<CR>
